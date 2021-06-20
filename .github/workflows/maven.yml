@@ -24,4 +24,4 @@ jobs:
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: /home/runner/work/messenger-server/messenger-server/target/jacoco.exec
+        file: /home/runner/work/messenger-server/messenger-server/target/site/jacoco/jacoco.xml
