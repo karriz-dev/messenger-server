@@ -38,7 +38,7 @@ jobs:
     - name: Packaging with Maven
       run: mvn -B package --file pom.xml
     - name: ssh commands execute
-      uses: appleboy/ssh-action@deploy
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.DEPLOY_SERVER_HOST }}
         username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
