@@ -21,11 +21,8 @@ public class Producer {
 
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(configs);
 
-        for (int i = 0; i < 5; i++) {
-            String message = "hello " + i;
-            producer.send(new ProducerRecord<String, String>("kalee-event", message));
-        }
-
+        producer.send(new ProducerRecord<String, String>(topic, payload));
+        
         producer.flush();
         producer.close();
 	}
