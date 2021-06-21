@@ -25,6 +25,7 @@ jobs:
         file: /home/runner/work/messenger-server/messenger-server/target/site/jacoco/jacoco.xml
         
   clean:
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -43,6 +44,7 @@ jobs:
         script: ${{ secrets.DEPLOY_SERVER_CLEAN_SCRIPT }}
         
   deploy:
+    needs: [test, clean]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
