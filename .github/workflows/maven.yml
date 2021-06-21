@@ -37,8 +37,8 @@ jobs:
         distribution: 'adopt'
     - name: Packaging with Maven
       run: mvn -B package --file pom.xml
-    - name: ssh commands execute
-      uses: appleboy/ssh-action@master
+    - name: scp commands execute
+      uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.DEPLOY_SERVER_HOST }}
         username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
