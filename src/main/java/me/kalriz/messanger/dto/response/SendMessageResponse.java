@@ -2,7 +2,6 @@ package me.kalriz.messanger.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
-import me.kalriz.messanger.types.ResponseErrorCode;
 import me.kalriz.messanger.types.ResponseResultCode;
 
 @Data
@@ -10,7 +9,7 @@ import me.kalriz.messanger.types.ResponseResultCode;
 public class SendMessageResponse {
 
 	private ResponseResultCode resultCode;
-	private ResponseErrorCode errCode;
+	private Integer errCode;
 	private String errMsg;
 	
 }

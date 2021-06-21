@@ -9,12 +9,12 @@ import me.kalriz.messanger.types.ResponseResultCode;
 public class SendMessageResponseTests {
 
 	@Test
-	public void generateTest()
+	public void sendMessageResponseGenerateTest()
 	{
 		SendMessageResponse response = SendMessageResponse.builder()
 										.resultCode(ResponseResultCode.SUCCESS)
 										.build();
-		
 		assertNotNull(response);
 	}
+	
 }

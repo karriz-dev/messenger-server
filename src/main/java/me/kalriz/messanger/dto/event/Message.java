@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Message {
 	private String nickName;
-	private Long timestamp;
+	private Long timestamp = System.currentTimeMillis();
 	private String message;
 }

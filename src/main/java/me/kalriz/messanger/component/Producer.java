@@ -4,11 +4,13 @@ import java.util.Properties;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Producer {
 	
+	@Async
 	public void Send(String topic, String payload)
 	{
 		Properties configs = new Properties();
