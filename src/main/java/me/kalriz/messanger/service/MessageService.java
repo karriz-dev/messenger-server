@@ -31,6 +31,11 @@ public class MessageService {
 			throw new MessageException(0x00000002, "message cannot be null and length < 1");
 		}
 		
-		producer.Send("kalee-event", gson.toJson(message));
+		if(message.getRoomId() == null || message.getRoomId() < 1)
+		{
+			throw new MessageException(0x00000003, "roomId cannot be < 1");
+		}
+		
+		producer.Send("kalee-chatroom-" + message.getRoomId(), gson.toJson(message));
 	}
 }

@@ -39,4 +39,19 @@ public class MessageServiceTests {
 		
 		Assertions.assertTrue(exception.getErrorCode() == 0x00000002);
 	}
+	
+	@Test
+	public void messageRoomIdAttrTest()
+	{	
+		Message message = new Message();
+		
+		message.setNickName("kalee");
+		message.setMessage("test");
+		
+		MessageException exception = Assertions.assertThrows(MessageException.class, ()->{
+			messageService.sendMessage(message);
+		});
+		
+		Assertions.assertTrue(exception.getErrorCode() == 0x00000003);
+	}
 }
