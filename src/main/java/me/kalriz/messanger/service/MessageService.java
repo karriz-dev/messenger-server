@@ -26,7 +26,7 @@ public class MessageService {
 			throw new MessageException(0x00000001, "nickname cannot be null");
 		}
 		
-		if(message.getMessage() == null && message.getMessage().length() < 1)
+		if(message.getMessage() == null || message.getMessage().length() < 1)
 		{
 			throw new MessageException(0x00000002, "message cannot be null and length < 1");
 		}
