@@ -11,8 +11,12 @@ public class Account {
 	private String password;
 	private String nickname;
 	private Integer gmCode;
-	private Long createAt;
-	private Long passwordUpdateAt;
-	private Long nicknameUpdateAt;
 	private String kaleelandAccount;
+	
+	@Builder.Default
+	private Long createAt = System.currentTimeMillis();
+	@Builder.Default
+	private Long passwordUpdateAt = System.currentTimeMillis();
+	@Builder.Default
+	private Long nicknameUpdateAt = System.currentTimeMillis();
 }
