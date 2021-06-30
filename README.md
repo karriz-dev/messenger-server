@@ -29,6 +29,7 @@
 ## Architecture
 test
 gpg test
+gpg test2
 
 ## Installation
 
