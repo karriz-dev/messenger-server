@@ -28,6 +28,7 @@
 
 ## Architecture
 test
+gpg test
 
 ## Installation
 
