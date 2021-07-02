@@ -25,13 +25,18 @@
 + Test tool
   - Junit 5
 
-
 ## Architecture
-test
-gpg test
-gpg test2
 
 ## Installation
 
 ## Usage
+### Github gpg sign commit
+commit을 했을 때 verify된 내용이 있어야 머지 할 수 있도록 설정을 변경하기 위해서 등록함(설정 하지않으면 아무나 코드를 commit 할 수 있으니 반드시 설정)
+
+1. win4gpg 설치하기
+2. 자신의 gpg키 생성하기
+3. Github Settings > SSH and GPG keys > new GPG key 클릭해서 자신의 gpg키 등록하기
+4. egit 5.11 버전 이상 설치하기
+5. gpg 키 전역 설정하기 
+6. test commit 해보기 (정상적으로 동작하는지 확인)
 
